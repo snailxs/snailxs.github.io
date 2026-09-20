@@ -1,0 +1,634 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "DM Sans", sans-serif;
+
+    background-color: #111111;
+
+    color: #f5f5f5;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+
+    position: fixed;
+
+    top: 0;
+
+    width: 100%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 6%;
+
+    background-color: rgba(17, 17, 17, 0.85);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 1000;
+
+}
+
+
+.logo {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-weight: 700;
+
+    font-size: 1.4rem;
+
+}
+
+
+.nav-links {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.nav-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+.nav-links a:hover {
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 120px 10%;
+
+    position: relative;
+
+}
+
+
+.hero-content {
+
+    max-width: 900px;
+
+}
+
+
+.eyebrow {
+
+    letter-spacing: 4px;
+
+    font-size: 0.75rem;
+
+    margin-bottom: 20px;
+
+    opacity: 0.6;
+
+}
+
+
+.hero h1 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(5rem, 14vw, 12rem);
+
+    line-height: 0.85;
+
+    margin-bottom: 40px;
+
+}
+
+
+.hero-description {
+
+    max-width: 500px;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 40px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.primary-button,
+.secondary-button {
+
+    display: inline-block;
+
+    padding: 16px 28px;
+
+    border: 1px solid white;
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    transition: 0.3s;
+
+}
+
+
+.primary-button:hover,
+.secondary-button:hover {
+
+    background-color: white;
+
+    color: black;
+
+}
+
+
+.scroll-indicator {
+
+    position: absolute;
+
+    bottom: 40px;
+
+    left: 10%;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    opacity: 0.6;
+
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+
+    padding: 150px 10%;
+
+}
+
+
+.section-label {
+
+    font-size: 0.75rem;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 80px;
+
+    opacity: 0.5;
+
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-grid {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 100px;
+
+    align-items: center;
+
+}
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+}
+
+
+.about-text h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.5rem, 5vw, 5rem);
+
+    line-height: 1.1;
+
+    margin-bottom: 40px;
+
+}
+
+
+.about-text p {
+
+    margin-bottom: 25px;
+
+    max-width: 550px;
+
+    opacity: 0.8;
+
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.project-card {
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 1fr;
+
+    gap: 70px;
+
+    margin-bottom: 180px;
+
+    align-items: center;
+
+}
+
+
+.project-card:nth-child(even) .project-image {
+
+    order: 2;
+
+}
+
+
+.project-image {
+
+    overflow: hidden;
+
+}
+
+
+.project-image img {
+
+    width: 100%;
+
+    height: 500px;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+
+}
+
+
+.project-card:hover img {
+
+    transform: scale(1.05);
+
+}
+
+
+.project-number {
+
+    font-size: 0.8rem;
+
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+.project-info h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(2.5rem, 4vw, 4.5rem);
+
+    margin-bottom: 25px;
+
+}
+
+
+.project-info>p {
+
+    margin-bottom: 30px;
+
+    opacity: 0.75;
+
+}
+
+
+/* =========================
+   PROJECT TAGS
+========================= */
+
+.project-tags {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 30px;
+
+}
+
+
+.project-tags span {
+
+    border: 1px solid #555;
+
+    padding: 8px 12px;
+
+    font-size: 0.65rem;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================
+   PROJECT LINK
+========================= */
+
+.project-link {
+
+    color: white;
+
+    text-decoration: none;
+
+    letter-spacing: 2px;
+
+    font-size: 0.75rem;
+
+}
+
+
+.project-link:hover {
+
+    opacity: 0.5;
+
+}
+
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 50px;
+
+}
+
+
+.skill-category {
+
+    border-top: 1px solid #555;
+
+    padding-top: 25px;
+
+}
+
+
+.skill-category h3 {
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.skill-category p {
+
+    opacity: 0.7;
+
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section h2 {
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(3rem, 7vw, 7rem);
+
+    line-height: 1;
+
+    max-width: 900px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.contact-email {
+
+    font-size: clamp(1.5rem, 3vw, 3rem);
+
+    color: white;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid white;
+
+}
+
+
+.social-links {
+
+    margin-top: 60px;
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.social-links a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 40px 10%;
+
+    border-top: 1px solid #333;
+
+    font-size: 0.7rem;
+
+    letter-spacing: 2px;
+
+    opacity: 0.5;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 800px) {
+
+
+    .navbar {
+
+        padding: 20px 6%;
+
+    }
+
+
+    .nav-links {
+
+        gap: 15px;
+
+    }
+
+
+    .nav-links a {
+
+        font-size: 0.6rem;
+
+    }
+
+
+    section {
+
+        padding: 100px 7%;
+
+    }
+
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+
+    }
+
+
+    .about-image img {
+
+        height: 450px;
+
+    }
+
+
+    .project-card {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        margin-bottom: 120px;
+
+    }
+
+
+    .project-card:nth-child(even) .project-image {
+
+        order: 0;
+
+    }
+
+
+    .project-image img {
+
+        height: 350px;
+
+    }
+
+
+    .skills-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
